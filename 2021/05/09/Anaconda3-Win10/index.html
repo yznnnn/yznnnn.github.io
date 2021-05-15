@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>在Win10中配置Anaconda3编程环境 | 余沧海的Blog</title>
+  <meta name="keywords" content=" Python , Anaconda ">
+  <meta name="description" content="在Win10中配置Anaconda3编程环境 | 余沧海的Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="[toc] 专业术语  Multi-view clustering：多视角聚类&#x2F;多模态聚类   常用词积累  moreover 此外 meanwhile 同时 s  常用短语积累  scale well with the data size 随数据大小拓展  The designed algorithm is initialization-independen">
+<meta property="og:type" content="article">
+<meta property="og:title" content="英语论文写作技巧积累">
+<meta property="og:url" content="http://example.com/2021/05/11/paper-writing-skill/index.html">
+<meta property="og:site_name" content="余沧海的Blog">
+<meta property="og:description" content="[toc] 专业术语  Multi-view clustering：多视角聚类&#x2F;多模态聚类   常用词积累  moreover 此外 meanwhile 同时 s  常用短语积累  scale well with the data size 随数据大小拓展  The designed algorithm is initialization-independen">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-05-11T08:17:03.000Z">
+<meta property="article:modified_time" content="2021-05-13T02:01:20.707Z">
+<meta property="article:author" content="余沧海">
+<meta property="article:tag" content="English">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.png">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.png"/>
+</a>
+<div class="author">
+    <span>余沧海</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/yznnnn"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="email"
+               href="mailto:ych271828@gmail.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(8)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="教程">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        教程
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="教程<--->编程环境搭建">
+                                        
+                                        编程环境搭建
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="教程<--->Blog搭建">
+                                        
+                                        Blog搭建
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="科研">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        科研
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="科研<--->工具">
+                                        
+                                        工具
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="科研<--->论文阅读">
+                                        
+                                        论文阅读
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="英语">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        英语
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="英语<--->论文写作">
+                                        
+                                        论文写作
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="8">
+<input type="hidden" id="yelog_site_word_count" value="8.3k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>文献管理</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Anaconda</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Anchor</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Clustering</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>English</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Graph Based</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Jupyter</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Multi-view</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Python</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="全部文章 "
+           href="/2021/05/09/total/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="文章导航☞">文章导航☞</span>
+            <span class="post-date" title="2021-05-09 09:14:44">2021/05/09</span>
+        </a>
+        
+        <a  class="全部文章 英语 论文写作 "
+           href="/2021/05/11/paper-writing-skill/"
+           data-tag="English"
+           data-author="" >
+            <span class="post-title" title="英语论文写作技巧积累">英语论文写作技巧积累</span>
+            <span class="post-date" title="2021-05-11 16:17:03">2021/05/11</span>
+        </a>
+        
+        <a  class="全部文章 科研 论文阅读 "
+           href="/2021/05/11/paper-Reading-1/"
+           data-tag="Clustering,Multi-view,Graph Based,Anchor"
+           data-author="" >
+            <span class="post-title" title="2020_Li《Multi-view_Clustering:A_Scalable_and_Parameter-free_Bipartite_Graph_Fusion_Method》">2020_Li《Multi-view_Clustering:A_Scalable_and_Parameter-free_Bipartite_Graph_Fusion_Method》</span>
+            <span class="post-date" title="2021-05-11 10:11:13">2021/05/11</span>
+        </a>
+        
+        <a  class="全部文章 科研 工具 "
+           href="/2021/05/10/Zotero/"
+           data-tag="文献管理"
+           data-author="" >
+            <span class="post-title" title="Zotero——你的文献管理工具">Zotero——你的文献管理工具</span>
+            <span class="post-date" title="2021-05-10 09:29:36">2021/05/10</span>
+        </a>
+        
+        <a  class="全部文章 教程 编程环境搭建 "
+           href="/2021/05/09/Jupyter-Win10/"
+           data-tag="Python,Jupyter"
+           data-author="" >
+            <span class="post-title" title="在Win10中配置Jupyter编程环境">在Win10中配置Jupyter编程环境</span>
+            <span class="post-date" title="2021-05-09 15:40:59">2021/05/09</span>
+        </a>
+        
+        <a  class="全部文章 教程 编程环境搭建 "
+           href="/2021/05/09/Anaconda3-Win10/"
+           data-tag="Python,Anaconda"
+           data-author="" >
+            <span class="post-title" title="在Win10中配置Anaconda3编程环境">在Win10中配置Anaconda3编程环境</span>
+            <span class="post-date" title="2021-05-09 10:52:17">2021/05/09</span>
+        </a>
+        
+        <a  class="全部文章 教程 Blog搭建 "
+           href="/2021/05/08/3-HexoIntroduction/"
+           data-tag="Hexo"
+           data-author="" >
+            <span class="post-title" title="基于3-Hexo主题的Hexo博客操作介绍">基于3-Hexo主题的Hexo博客操作介绍</span>
+            <span class="post-date" title="2021-05-08 21:26:03">2021/05/08</span>
+        </a>
+        
+        <a  class="全部文章 教程 Blog搭建 "
+           href="/2021/05/08/Hexo-GithubPage/"
+           data-tag="Hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo + Github Pages, 创建你自己的个人主页">Hexo + Github Pages, 创建你自己的个人主页</span>
+            <span class="post-date" title="2021-05-08 16:18:33">2021/05/08</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Anaconda3-Win10" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">在Win10中配置Anaconda3编程环境</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="教程">教程</a> > 
+            
+            <a  data-rel="教程&lt;---&gt;编程环境搭建">编程环境搭建</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">Python</a>
+            
+            <a class="color4">Anaconda</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2021-05-10 09:27:32'>2021-05-09 10:52</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:1.1k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">1. 介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">2. 安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE"><span class="toc-text">3. 初始配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#anaconda-prompt-%E8%AE%BE%E7%BD%AE%E9%9D%9E%E5%BF%85%E9%A1%BB"><span class="toc-text">3.1. Anaconda Prompt 设置（非必须）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B-anaconda-%E7%89%88%E6%9C%AC"><span class="toc-text">3.2. 查看 Anaconda 版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%9B%BD%E5%86%85%E6%BA%90%E9%9D%9E%E5%BF%85%E9%A1%BB"><span class="toc-text">3.3. 设置国内源（非必须）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0-anaconda-%E8%87%B3%E6%9C%80%E6%96%B0"><span class="toc-text">3.4. 更新 Anaconda 至最新</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%B8%80%E4%BA%9B%E5%BF%85%E8%A6%81%E7%9A%84%E5%8C%85"><span class="toc-text">4. 安装一些必要的包</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#graphviz"><span class="toc-text">4.1. graphviz</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86"><span class="toc-text">5. 虚拟环境管理</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">1. 介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">2. 安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE"><span class="toc-text">3. 初始配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#anaconda-prompt-%E8%AE%BE%E7%BD%AE%E9%9D%9E%E5%BF%85%E9%A1%BB"><span class="toc-text">3.1. Anaconda Prompt 设置（非必须）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B-anaconda-%E7%89%88%E6%9C%AC"><span class="toc-text">3.2. 查看 Anaconda 版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%9B%BD%E5%86%85%E6%BA%90%E9%9D%9E%E5%BF%85%E9%A1%BB"><span class="toc-text">3.3. 设置国内源（非必须）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0-anaconda-%E8%87%B3%E6%9C%80%E6%96%B0"><span class="toc-text">3.4. 更新 Anaconda 至最新</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%B8%80%E4%BA%9B%E5%BF%85%E8%A6%81%E7%9A%84%E5%8C%85"><span class="toc-text">4. 安装一些必要的包</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#graphviz"><span class="toc-text">4.1. graphviz</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86"><span class="toc-text">5. 虚拟环境管理</span></a></li></ol></div></p>
+<h1 id="介绍">1. 介绍</h1>
+<p>关于 Anaconda ，维基百科是这么介绍的。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Anaconda_(Python%E5%8F%91%E8%A1%8C%E7%89%88)">Anaconda</a> 是一个免费开源的Python和R语言的发行版本，用于计算科学（数据科学、机器学习、大数据处理和预测分析），Anaconda致力于简化软件包管理系统和部署。Anaconda的包使用软件包管理系统Conda进行管理。超过1200万人使用Anaconda发行版本，并且Anaconda拥有超过1400个适用于Windows、Linux和MacOS的数据科学软件包。</p>
+</blockquote>
+<p>简而言之，我的理解就是，对于从事数据科学相关行业并需要使用Python语言的人而言，Anaconda提供了开箱即用的便捷，集成了大部分数据处理包，免除了单独下载Python后需要一个个安装自己的包的麻烦。其次，Anaconda提供了方便的环境管理，通过虚拟环境的方式，使你能够基于不同项目构建互不冲突的个性化Python环境（Python与工具包的版本不同）。</p>
+<p>自2019年接触机器学习以来，Anaconda便是我电脑中必须要装的软件，重要性等同于QQ！</p>
+<p>下面将介绍我是如何在Win10上搭建Anaconda环境的，仅供参考，毕竟每个人使用习惯不一样。</p>
+<h1 id="安装">2. 安装</h1>
+<p>在 <a target="_blank" rel="noopener" href="https://www.anaconda.com/products/individual#Downloads">Anaconda</a> 的官网可以直接下载最新版本的 Anaconda，如果你觉得太慢，也可以下载<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/?C=M&amp;O=D">清华镜像</a>的版本。</p>
+<p>在 Win10 中，下载后直接点击安装就好。（注意，安装时不要选择将地址加入环境变量）</p>
+<h1 id="初始配置">3. 初始配置</h1>
+<h2 id="anaconda-prompt-设置非必须">3.1. Anaconda Prompt 设置（非必须）</h2>
+<p><code>Anaconda Prompt (anaconda3)</code> 是 Anaconda3 提供的默认命令行，你可以直接使用。</p>
+<p>如果你在 Win10 中安装了 <code>Windows Terminal</code>，那么接下来将介绍如何在 <code>Windows Terminal</code> 中使用 <code>Anaconda Prompt (anaconda3)</code>。该步可以跳过，不影响后续步骤。</p>
+<p>（关于 <a target="_blank" rel="noopener" href="https://github.com/microsoft/Terminal">Windows Terminal</a> 的安装，直接在微软商店搜索就好）</p>
+<p>在桌面右键鼠标，打开 <code>Windows Terminal</code>，点击标题栏的 <code>+</code> 旁边的向下的三角，选择设置，在打开的界面左下有一个 <code>⚙ 打开JSON文件</code> ，点击后可以打开 <code>Windows Terminal</code> 的配置文件。（推荐使用 Vs Code 进行编辑）</p>
+<p>仿照下面的设置就可以了：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;profiles&quot;:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">&#123;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;defaults&quot;</span><span class="fu">:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">&#123;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="er">//</span> <span class="er">Put</span> <span class="er">settings</span> <span class="er">here</span> <span class="er">that</span> <span class="er">you</span> <span class="er">want</span> <span class="er">to</span> <span class="er">apply</span> <span class="er">to</span> <span class="er">all</span> <span class="er">profiles.</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">&#125;,</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;list&quot;</span><span class="fu">:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">&#123;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            <span class="er">//</span> <span class="er">Make</span> <span class="er">changes</span> <span class="er">here</span> <span class="er">to</span> <span class="er">the</span> <span class="er">cmd.exe</span> <span class="er">profile.</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;guid&quot;</span><span class="fu">:</span> <span class="st">&quot;&#123;0caa0dad-35be-5f56-a8ff-afceeeaa6101&#125;&quot;</span><span class="fu">,</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;命令提示符&quot;</span><span class="fu">,</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;commandline&quot;</span><span class="fu">:</span> <span class="st">&quot;cmd.exe&quot;</span><span class="fu">,</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;hidden&quot;</span><span class="fu">:</span> <span class="kw">false</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="fu">&#125;</span><span class="ot">,</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="fu">&#123;</span>   <span class="er">//</span> <span class="er">Anaconda</span> <span class="er">Settings</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;guid&quot;</span><span class="fu">:</span> <span class="st">&quot;&#123;b453ae62-4e3d-5e58-b989-0a998ec441b7&#125;&quot;</span><span class="fu">,</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;hidden&quot;</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;Anaconda Prompt&quot;</span><span class="fu">,</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;icon&quot;</span><span class="fu">:</span> <span class="st">&quot;C:</span><span class="ch">\\</span><span class="st">Users</span><span class="ch">\\</span><span class="st">xxx</span><span class="ch">\\</span><span class="st">anaconda3</span><span class="ch">\\</span><span class="st">Menu</span><span class="ch">\\</span><span class="st">anaconda-navigator.ico&quot;</span><span class="fu">,</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;commandline&quot;</span><span class="fu">:</span> <span class="st">&quot;cmd.exe /K C:</span><span class="ch">\\</span><span class="st">Users</span><span class="ch">\\</span><span class="st">xxx</span><span class="ch">\\</span><span class="st">anaconda3</span><span class="ch">\\</span><span class="st">Scripts</span><span class="ch">\\</span><span class="st">activate.bat&quot;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="fu">&#125;</span><span class="ot">,</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        <span class="fu">&#123;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;guid&quot;</span><span class="fu">:</span> <span class="st">&quot;&#123;b453ae62-4e3d-5e58-b989-0a998ec441b8&#125;&quot;</span><span class="fu">,</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;hidden&quot;</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;Azure Cloud Shell&quot;</span><span class="fu">,</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;source&quot;</span><span class="fu">:</span> <span class="st">&quot;Windows.Terminal.Azure&quot;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>        <span class="fu">&#125;</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">&#125;</span><span class="er">,</span></span></code></pre></div>
+<h2 id="查看-anaconda-版本">3.2. 查看 Anaconda 版本</h2>
+<p>打开 <code>Anaconda Prompt (anaconda3)</code> ，执行如下指令即可查看当前安装的 Anaconda 的版本。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> <span class="at">--version</span></span></code></pre></div>
+<p>我的运行结果为</p>
+<blockquote>
+<p>(base) C:&gt;conda --version conda 4.9.2</p>
+</blockquote>
+<h2 id="设置国内源非必须">3.3. 设置国内源（非必须）</h2>
+<p>由于墙的存在，需要联网的指令操作会慢的令人抓狂，这里给出借用 <strong><em>清华镜像</em></strong> 与 <strong><em>中科大镜像</em></strong> 的设置方法。</p>
+<p>查看已经安装的镜像源：</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--show</span></span></code></pre></div>
+<p>添加清华源：</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 添加清华源</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--add</span> channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--add</span> channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># pytorch</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--add</span> channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 设置搜索时显示通道地址</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--set</span> show_channel_urls yes</span></code></pre></div>
+<p>添加中科大源：</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 添加中科大源</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--add</span> channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--add</span> channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--add</span> channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--add</span> channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--add</span> channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--add</span> channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--set</span> show_channel_urls yes</span></code></pre></div>
+<p>恢复默认源：</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--remove-key</span> channels</span></code></pre></div>
+<h2 id="更新-anaconda-至最新">3.4. 更新 Anaconda 至最新</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> update conda</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> update anaconda</span></code></pre></div>
+<h1 id="安装一些必要的包">4. 安装一些必要的包</h1>
+<h2 id="graphviz">4.1. graphviz</h2>
+<p>这是一个用于绘图的包。</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install pydot</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install graphviz</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install python-graphviz</span></code></pre></div>
+<p>在 Win10 中，还需要在环境变量 <code>path</code> 中添加类似 <code>C:\Users\yzn\anaconda3\Library\bin\graphviz</code> 的内容。</p>
+<h1 id="虚拟环境管理">5. 虚拟环境管理</h1>
+<p>待续。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 ych271828@gmail.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hexo + Github Pages, 创建你自己的个人主页 | 余沧海的Blog</title>
+  <meta name="keywords" content=" Hexo ">
+  <meta name="description" content="Hexo + Github Pages, 创建你自己的个人主页 | 余沧海的Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="[toc] 专业术语  Multi-view clustering：多视角聚类&#x2F;多模态聚类   常用词积累  moreover 此外 meanwhile 同时 s  常用短语积累  scale well with the data size 随数据大小拓展  The designed algorithm is initialization-independen">
+<meta property="og:type" content="article">
+<meta property="og:title" content="英语论文写作技巧积累">
+<meta property="og:url" content="http://example.com/2021/05/11/paper-writing-skill/index.html">
+<meta property="og:site_name" content="余沧海的Blog">
+<meta property="og:description" content="[toc] 专业术语  Multi-view clustering：多视角聚类&#x2F;多模态聚类   常用词积累  moreover 此外 meanwhile 同时 s  常用短语积累  scale well with the data size 随数据大小拓展  The designed algorithm is initialization-independen">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-05-11T08:17:03.000Z">
+<meta property="article:modified_time" content="2021-05-13T02:01:20.707Z">
+<meta property="article:author" content="余沧海">
+<meta property="article:tag" content="English">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.png">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.png"/>
+</a>
+<div class="author">
+    <span>余沧海</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/yznnnn"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="email"
+               href="mailto:ych271828@gmail.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(8)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="教程">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        教程
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="教程<--->编程环境搭建">
+                                        
+                                        编程环境搭建
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="教程<--->Blog搭建">
+                                        
+                                        Blog搭建
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="科研">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        科研
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="科研<--->工具">
+                                        
+                                        工具
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="科研<--->论文阅读">
+                                        
+                                        论文阅读
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="英语">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        英语
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="英语<--->论文写作">
+                                        
+                                        论文写作
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="8">
+<input type="hidden" id="yelog_site_word_count" value="8.3k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>文献管理</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Anaconda</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Anchor</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Clustering</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>English</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Graph Based</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Jupyter</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Multi-view</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Python</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="全部文章 "
+           href="/2021/05/09/total/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="文章导航☞">文章导航☞</span>
+            <span class="post-date" title="2021-05-09 09:14:44">2021/05/09</span>
+        </a>
+        
+        <a  class="全部文章 英语 论文写作 "
+           href="/2021/05/11/paper-writing-skill/"
+           data-tag="English"
+           data-author="" >
+            <span class="post-title" title="英语论文写作技巧积累">英语论文写作技巧积累</span>
+            <span class="post-date" title="2021-05-11 16:17:03">2021/05/11</span>
+        </a>
+        
+        <a  class="全部文章 科研 论文阅读 "
+           href="/2021/05/11/paper-Reading-1/"
+           data-tag="Clustering,Multi-view,Graph Based,Anchor"
+           data-author="" >
+            <span class="post-title" title="2020_Li《Multi-view_Clustering:A_Scalable_and_Parameter-free_Bipartite_Graph_Fusion_Method》">2020_Li《Multi-view_Clustering:A_Scalable_and_Parameter-free_Bipartite_Graph_Fusion_Method》</span>
+            <span class="post-date" title="2021-05-11 10:11:13">2021/05/11</span>
+        </a>
+        
+        <a  class="全部文章 科研 工具 "
+           href="/2021/05/10/Zotero/"
+           data-tag="文献管理"
+           data-author="" >
+            <span class="post-title" title="Zotero——你的文献管理工具">Zotero——你的文献管理工具</span>
+            <span class="post-date" title="2021-05-10 09:29:36">2021/05/10</span>
+        </a>
+        
+        <a  class="全部文章 教程 编程环境搭建 "
+           href="/2021/05/09/Jupyter-Win10/"
+           data-tag="Python,Jupyter"
+           data-author="" >
+            <span class="post-title" title="在Win10中配置Jupyter编程环境">在Win10中配置Jupyter编程环境</span>
+            <span class="post-date" title="2021-05-09 15:40:59">2021/05/09</span>
+        </a>
+        
+        <a  class="全部文章 教程 编程环境搭建 "
+           href="/2021/05/09/Anaconda3-Win10/"
+           data-tag="Python,Anaconda"
+           data-author="" >
+            <span class="post-title" title="在Win10中配置Anaconda3编程环境">在Win10中配置Anaconda3编程环境</span>
+            <span class="post-date" title="2021-05-09 10:52:17">2021/05/09</span>
+        </a>
+        
+        <a  class="全部文章 教程 Blog搭建 "
+           href="/2021/05/08/3-HexoIntroduction/"
+           data-tag="Hexo"
+           data-author="" >
+            <span class="post-title" title="基于3-Hexo主题的Hexo博客操作介绍">基于3-Hexo主题的Hexo博客操作介绍</span>
+            <span class="post-date" title="2021-05-08 21:26:03">2021/05/08</span>
+        </a>
+        
+        <a  class="全部文章 教程 Blog搭建 "
+           href="/2021/05/08/Hexo-GithubPage/"
+           data-tag="Hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo + Github Pages, 创建你自己的个人主页">Hexo + Github Pages, 创建你自己的个人主页</span>
+            <span class="post-date" title="2021-05-08 16:18:33">2021/05/08</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Hexo-GithubPage" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Hexo + Github Pages, 创建你自己的个人主页</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="教程">教程</a> > 
+            
+            <a  data-rel="教程&lt;---&gt;Blog搭建">Blog搭建</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">Hexo</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2021-05-09 16:08:58'>2021-05-08 16:18</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:1.3k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">1. 介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">2. 准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-git"><span class="toc-text">2.1. 安装 Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-node.js"><span class="toc-text">2.2. 安装 node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-typora"><span class="toc-text">2.3. 安装 Typora</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-vs-code"><span class="toc-text">2.4. 安装 Vs Code</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%8D%9A%E5%AE%A2"><span class="toc-text">3. 搭建本地博客</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-hexo"><span class="toc-text">3.1. 安装 Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF"><span class="toc-text">3.2. 初始化博客模板</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#github-pages"><span class="toc-text">4. Github Pages</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-github-pages-%E4%BB%93%E5%BA%93"><span class="toc-text">4.1. 创建 Github Pages 仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-ssh-key"><span class="toc-text">4.2. 配置 SSH Key</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E6%9C%AC%E5%9C%B0hexo%E5%8D%9A%E5%AE%A2%E5%88%B0github-pages"><span class="toc-text">5. 部署本地Hexo博客到Github Pages</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB"><span class="toc-text">推荐阅读</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">1. 介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">2. 准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-git"><span class="toc-text">2.1. 安装 Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-node.js"><span class="toc-text">2.2. 安装 node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-typora"><span class="toc-text">2.3. 安装 Typora</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-vs-code"><span class="toc-text">2.4. 安装 Vs Code</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%8D%9A%E5%AE%A2"><span class="toc-text">3. 搭建本地博客</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-hexo"><span class="toc-text">3.1. 安装 Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF"><span class="toc-text">3.2. 初始化博客模板</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#github-pages"><span class="toc-text">4. Github Pages</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-github-pages-%E4%BB%93%E5%BA%93"><span class="toc-text">4.1. 创建 Github Pages 仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-ssh-key"><span class="toc-text">4.2. 配置 SSH Key</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E6%9C%AC%E5%9C%B0hexo%E5%8D%9A%E5%AE%A2%E5%88%B0github-pages"><span class="toc-text">5. 部署本地Hexo博客到Github Pages</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB"><span class="toc-text">推荐阅读</span></a></li></ol></div></p>
+<p>本文将详细介绍如何利用 Hexo 与 Github Pages 构建一个个人主页。</p>
+<p>本文的配置环境为：</p>
+<blockquote>
+<p>版本 Windows 10 教育版 版本号 20H2 操作系统内部版本 19042.964</p>
+</blockquote>
+<p>接下来将按照如下步骤来讲解构建过程：</p>
+<ol type="1">
+<li>搭建本地 Hexo 博客</li>
+<li>在Github建立Page仓库，并与本地Git建立SSH</li>
+<li>将本地 Hexo 博客部署到 Github Pages 上去</li>
+</ol>
+<p>值得一提的是，<strong><em>步骤1</em></strong> 与 <strong><em>步骤2</em></strong> 的完成不存在先后顺序，<strong><em>步骤3</em></strong> 必须在前两个步骤完成后再进行。</p>
+<h1 id="介绍">1. 介绍</h1>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a></p>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a target="_blank" rel="noopener" href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p></li>
+<li><p>Github Pages</p>
+<p>Gihub Pages 是Github官方提供给用户的个人主页，结合 Hexo 生成静态网页的特点，可以用来搭建博客。</p></li>
+</ul>
+<h1 id="准备工作">2. 准备工作</h1>
+<h2 id="安装-git">2.1. 安装 Git</h2>
+<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Git">Git</a> 是一个分布式版本控制软件，最初由林纳斯·托瓦兹创作，于2005年以GPL发布。最初目的是为更好地管理Linux内核开发而设计。</p>
+<p>Git 的安装是建立博客过程中最关键的部分，该软件要承担 <strong>终端命令</strong> 和 <strong>部署到Github</strong> 的重任，不过别担心，Windows上的安装非常简单，在<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">这里</a>下载，默认安装就好。</p>
+<h2 id="安装-node.js">2.2. 安装 node.js</h2>
+<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Node.js">Node.js</a> 是能够在服务器端运行 JavaScript 的开放源代码、跨平台运行环境。</p>
+<p>Node.js 是 Hexo 运行的基础，在<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download/">这里</a>下载，下载完默认安装就好，非常简单。</p>
+<p><strong><em>下载时请选择长期支持版（LTS）！</em></strong></p>
+<h2 id="安装-typora">2.3. 安装 Typora</h2>
+<p><a target="_blank" rel="noopener" href="https://www.typora.io/">Typora</a> 是一个非常好用的 Markdown 编辑器，给你实时渲染的体验，软件支持全平台。</p>
+<p>在编写 Markdown 博文时，推荐使用该软件进行编辑。</p>
+<p>Windows 版本在<a target="_blank" rel="noopener" href="https://www.typora.io/#windows">这里</a>下载。</p>
+<h2 id="安装-vs-code">2.4. 安装 Vs Code</h2>
+<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Visual_Studio_Code">Visual Studio Code</a>（简称VS Code）是一款由微软开发且跨平台的免费源代码编辑器。</p>
+<p>都用Github建博客了，这个干嘛用的肯定知道！肯定装了！我就不多说了！（<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">官网</a>）</p>
+<h1 id="搭建本地博客">3. 搭建本地博客</h1>
+<p>这个部分其实建议参考 Hexo 的<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">官方文档</a>，我这里仅给出我的步骤。</p>
+<p><strong><em>注意：请先完成准备工作！</em></strong></p>
+<h2 id="安装-hexo">3.1. 安装 Hexo</h2>
+<p>随便在哪里右键鼠标，点击 <code>Git Bash Here</code>，执行如下命令：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> hexo-cli</span></code></pre></div>
+<p>安装完毕后，执行 <code>hexo -v</code>，若出现类似如下内容，则说明安装成功：</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yzn@DESKTOP</span> MINGW64 ~/Desktop</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> hexo <span class="at">-v</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo-cli:</span> 4.2.0</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">os:</span> Windows_NT 10.0.19042 win32 ia32</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">node:</span> 14.16.1</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">v8:</span> 8.4.371.19-node.18</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">uv:</span> 1.40.0</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">zlib:</span> 1.2.11</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ex">brotli:</span> 1.0.9</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ex">ares:</span> 1.16.1</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ex">modules:</span> 83</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ex">nghttp2:</span> 1.41.0</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ex">napi:</span> 7</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ex">llhttp:</span> 2.1.3</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ex">openssl:</span> 1.1.1k</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="ex">cldr:</span> 37.0</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="ex">icu:</span> 67.1</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="ex">tz:</span> 2020a</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="ex">unicode:</span> 13.0</span></code></pre></div>
+<h2 id="初始化博客模板">3.2. 初始化博客模板</h2>
+<p>在你想要保存博客文件的目录下，右键鼠标，点击 <code>Git Bash Here</code>，</p>
+<p>执行初始化命令：</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> init myblog</span></code></pre></div>
+<p>执行完毕后，在当前目录下，就会自动创建一个名为 <code>myblog</code> 的目录了。</p>
+<p>进入目录后，执行服务器启动指令，就能在 <code>http://localhost:4000/</code>看见创建好的博客模板了。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> myblog   <span class="co"># 进入博客目录</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> server <span class="co"># Hexo本地服务器启动</span></span></code></pre></div>
+<h1 id="github-pages">4. Github Pages</h1>
+<h2 id="创建-github-pages-仓库">4.1. 创建 Github Pages 仓库</h2>
+<p>在个人的 <a target="_blank" rel="noopener" href="https://github.com/">Github</a> 中建立一个仓库，仓库名设置为 <code>xxx.github.io</code>，<code>xxx</code> 是你Github的用户名。</p>
+<h2 id="配置-ssh-key">4.2. 配置 SSH Key</h2>
+<p>这一步是为了部署本地博客到 Github 上去。</p>
+<p>如果你的 Git 是刚安装好的，请执行下面的指令：</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 全局配置本地账户</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">&quot;xxx&quot;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">&quot;邮箱地址&quot;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 生成密钥 SSH Key</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> rsa <span class="at">-C</span> <span class="st">&#39;上面的邮箱&#39;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 按三次回车即可生成SSH Key</span></span></code></pre></div>
+<p>生成完毕后，执行如下指令查看 SSH Key</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/.ssh/id_rsa.pub</span></code></pre></div>
+<p>打开你的 Github 主页，点击右上角你的头像，再在出现的菜单中点击 <code>Settings</code>，进入 <a target="_blank" rel="noopener" href="https://github.com/settings/keys">SSH设置页面</a>，在 SSH Keys 部分，点击按钮 <code>New SSH key</code>，将刚刚执行指令获得的以 "ssh-ras" 开头的所有字符串复制到 Key 的部分去，Title 随便设置，看你心情。</p>
+<p>上面的部分完成后，执行指令 <code>ssh -T git@github.com</code> 检查是否配置成功，若出现形如如下情况，则成功：</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yzn@DESKTOP</span> MINGW64 ~/Desktop</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ssh <span class="at">-T</span> git@github.com</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Hi</span> yznnnn! You<span class="st">&#39;ve successfully authenticated, but GitHub does not provide shell access.</span></span></code></pre></div>
+<h1 id="部署本地hexo博客到github-pages">5. 部署本地Hexo博客到Github Pages</h1>
+<p>先安装一个插件，用于部署本地Hexo博客到Github Pages：</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install hexo-deployer-git <span class="at">--save</span></span></code></pre></div>
+<p>安装完毕后，首先在本地生成静态页面：</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> clean     <span class="co"># 清除缓存 </span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> generate  <span class="co"># 生成静态页面</span></span></code></pre></div>
+<p>然后部署到 Github Pages 中去：</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> deploy</span></code></pre></div>
+<p>如果一切顺利，就能在 <code>https://xxx.github.io/</code> 上看到你的页面啦！</p>
+<p>如果显示404，请先去上个厕所回来再看！</p>
+<p>部署命令可以集成为如下一条命令（根据这个命令，你可以DIY一下自己的部署命令）：</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> clean <span class="kw">&amp;&amp;</span> <span class="ex">hexo</span> generate <span class="kw">&amp;&amp;</span> <span class="ex">hexo</span> deploy <span class="kw">&amp;&amp;</span> <span class="ex">hexo</span> server</span></code></pre></div>
+<h1 id="推荐阅读">推荐阅读</h1>
+<ul>
+<li><p><a href="/2021/05/08/3-HexoIntroduction/">基于3-Hexo主题的Hexo博客操作介绍</a>：</p>
+<p>这篇文章算是本文的后续，介绍了基于3-Hexo主题的Hexo博客操作。</p></li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 ych271828@gmail.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

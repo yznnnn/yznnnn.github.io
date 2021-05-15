@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>基于3-Hexo主题的Hexo博客操作介绍 | 余沧海的Blog</title>
+  <meta name="keywords" content=" Hexo ">
+  <meta name="description" content="基于3-Hexo主题的Hexo博客操作介绍 | 余沧海的Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="[toc] 专业术语  Multi-view clustering：多视角聚类&#x2F;多模态聚类   常用词积累  moreover 此外 meanwhile 同时 s  常用短语积累  scale well with the data size 随数据大小拓展  The designed algorithm is initialization-independen">
+<meta property="og:type" content="article">
+<meta property="og:title" content="英语论文写作技巧积累">
+<meta property="og:url" content="http://example.com/2021/05/11/paper-writing-skill/index.html">
+<meta property="og:site_name" content="余沧海的Blog">
+<meta property="og:description" content="[toc] 专业术语  Multi-view clustering：多视角聚类&#x2F;多模态聚类   常用词积累  moreover 此外 meanwhile 同时 s  常用短语积累  scale well with the data size 随数据大小拓展  The designed algorithm is initialization-independen">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-05-11T08:17:03.000Z">
+<meta property="article:modified_time" content="2021-05-13T02:01:20.707Z">
+<meta property="article:author" content="余沧海">
+<meta property="article:tag" content="English">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.png">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.png"/>
+</a>
+<div class="author">
+    <span>余沧海</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/yznnnn"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="email"
+               href="mailto:ych271828@gmail.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(8)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="教程">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        教程
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="教程<--->编程环境搭建">
+                                        
+                                        编程环境搭建
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="教程<--->Blog搭建">
+                                        
+                                        Blog搭建
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="科研">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        科研
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="科研<--->工具">
+                                        
+                                        工具
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="科研<--->论文阅读">
+                                        
+                                        论文阅读
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="英语">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        英语
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="英语<--->论文写作">
+                                        
+                                        论文写作
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="8">
+<input type="hidden" id="yelog_site_word_count" value="8.3k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>文献管理</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Anaconda</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Anchor</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Clustering</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>English</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Graph Based</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Jupyter</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Multi-view</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Python</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="全部文章 "
+           href="/2021/05/09/total/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="文章导航☞">文章导航☞</span>
+            <span class="post-date" title="2021-05-09 09:14:44">2021/05/09</span>
+        </a>
+        
+        <a  class="全部文章 英语 论文写作 "
+           href="/2021/05/11/paper-writing-skill/"
+           data-tag="English"
+           data-author="" >
+            <span class="post-title" title="英语论文写作技巧积累">英语论文写作技巧积累</span>
+            <span class="post-date" title="2021-05-11 16:17:03">2021/05/11</span>
+        </a>
+        
+        <a  class="全部文章 科研 论文阅读 "
+           href="/2021/05/11/paper-Reading-1/"
+           data-tag="Clustering,Multi-view,Graph Based,Anchor"
+           data-author="" >
+            <span class="post-title" title="2020_Li《Multi-view_Clustering:A_Scalable_and_Parameter-free_Bipartite_Graph_Fusion_Method》">2020_Li《Multi-view_Clustering:A_Scalable_and_Parameter-free_Bipartite_Graph_Fusion_Method》</span>
+            <span class="post-date" title="2021-05-11 10:11:13">2021/05/11</span>
+        </a>
+        
+        <a  class="全部文章 科研 工具 "
+           href="/2021/05/10/Zotero/"
+           data-tag="文献管理"
+           data-author="" >
+            <span class="post-title" title="Zotero——你的文献管理工具">Zotero——你的文献管理工具</span>
+            <span class="post-date" title="2021-05-10 09:29:36">2021/05/10</span>
+        </a>
+        
+        <a  class="全部文章 教程 编程环境搭建 "
+           href="/2021/05/09/Jupyter-Win10/"
+           data-tag="Python,Jupyter"
+           data-author="" >
+            <span class="post-title" title="在Win10中配置Jupyter编程环境">在Win10中配置Jupyter编程环境</span>
+            <span class="post-date" title="2021-05-09 15:40:59">2021/05/09</span>
+        </a>
+        
+        <a  class="全部文章 教程 编程环境搭建 "
+           href="/2021/05/09/Anaconda3-Win10/"
+           data-tag="Python,Anaconda"
+           data-author="" >
+            <span class="post-title" title="在Win10中配置Anaconda3编程环境">在Win10中配置Anaconda3编程环境</span>
+            <span class="post-date" title="2021-05-09 10:52:17">2021/05/09</span>
+        </a>
+        
+        <a  class="全部文章 教程 Blog搭建 "
+           href="/2021/05/08/3-HexoIntroduction/"
+           data-tag="Hexo"
+           data-author="" >
+            <span class="post-title" title="基于3-Hexo主题的Hexo博客操作介绍">基于3-Hexo主题的Hexo博客操作介绍</span>
+            <span class="post-date" title="2021-05-08 21:26:03">2021/05/08</span>
+        </a>
+        
+        <a  class="全部文章 教程 Blog搭建 "
+           href="/2021/05/08/Hexo-GithubPage/"
+           data-tag="Hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo + Github Pages, 创建你自己的个人主页">Hexo + Github Pages, 创建你自己的个人主页</span>
+            <span class="post-date" title="2021-05-08 16:18:33">2021/05/08</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-3-HexoIntroduction" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">基于3-Hexo主题的Hexo博客操作介绍</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="教程">教程</a> > 
+            
+            <a  data-rel="教程&lt;---&gt;Blog搭建">Blog搭建</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">Hexo</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2021-05-15 16:49:59'>2021-05-08 21:26</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:1.8k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">1. 介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo%E4%B8%BB%E9%A2%98%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">2. 3-Hexo主题初始化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">2.1. 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0"><span class="toc-text">2.2. 更新</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo-%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE"><span class="toc-text">3. 3-Hexo 主题设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%A4%B4%E5%83%8F%E4%B8%8E%E5%9B%BE%E6%A0%87"><span class="toc-text">3.1. 设置头像与图标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E8%A8%80%E5%9B%BD%E9%99%85%E5%8C%96"><span class="toc-text">3.1. 语言国际化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%97%AD-hexo-%E8%87%AA%E5%B8%A6%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE"><span class="toc-text">3.3. 关闭 Hexo 自带代码高亮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%94%AF%E6%8C%81"><span class="toc-text">3.4. 数学公式支持</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1"><span class="toc-text">3.5. 字数统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5%E8%AE%BE%E7%BD%AE"><span class="toc-text">3.6. 链接设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%90%AF%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2"><span class="toc-text">3.7. 开启关于页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE"><span class="toc-text">3.8. 代码高亮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E6%A0%B7%E5%BC%8F"><span class="toc-text">3.9. 表格样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E7%AE%A1%E7%90%86"><span class="toc-text">3.10. 图片管理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E7%BC%96%E8%BE%91%E6%93%8D%E4%BD%9C"><span class="toc-text">4. 文章编辑操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%88%9B%E5%BB%BA"><span class="toc-text">4.1. 文章创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%88%A0%E9%99%A4"><span class="toc-text">4.2. 文章删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB"><span class="toc-text">4.3. 文章分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6"><span class="toc-text">4.4. 文章置顶</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">1. 介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo%E4%B8%BB%E9%A2%98%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">2. 3-Hexo主题初始化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">2.1. 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0"><span class="toc-text">2.2. 更新</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo-%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE"><span class="toc-text">3. 3-Hexo 主题设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%A4%B4%E5%83%8F%E4%B8%8E%E5%9B%BE%E6%A0%87"><span class="toc-text">3.1. 设置头像与图标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E8%A8%80%E5%9B%BD%E9%99%85%E5%8C%96"><span class="toc-text">3.1. 语言国际化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%97%AD-hexo-%E8%87%AA%E5%B8%A6%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE"><span class="toc-text">3.3. 关闭 Hexo 自带代码高亮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%94%AF%E6%8C%81"><span class="toc-text">3.4. 数学公式支持</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1"><span class="toc-text">3.5. 字数统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5%E8%AE%BE%E7%BD%AE"><span class="toc-text">3.6. 链接设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%90%AF%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2"><span class="toc-text">3.7. 开启关于页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE"><span class="toc-text">3.8. 代码高亮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E6%A0%B7%E5%BC%8F"><span class="toc-text">3.9. 表格样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E7%AE%A1%E7%90%86"><span class="toc-text">3.10. 图片管理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E7%BC%96%E8%BE%91%E6%93%8D%E4%BD%9C"><span class="toc-text">4. 文章编辑操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%88%9B%E5%BB%BA"><span class="toc-text">4.1. 文章创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%88%A0%E9%99%A4"><span class="toc-text">4.2. 文章删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB"><span class="toc-text">4.3. 文章分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6"><span class="toc-text">4.4. 文章置顶</span></a></li></ol></li></ol></div></p>
+<p>本文的基础是建立在 <a href="/2021/05/08/Hexo-GithubPage/">Hexo + Github Pages, 创建你自己的个人主页</a> 这篇文章之上的，如果您是一个新手，请先按照这篇文章所述操作一遍。</p>
+<h1 id="介绍">1. 介绍</h1>
+<p><a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 是为 <a target="_blank" rel="noopener" href="https://github.com/tommy351/hexo">hexo</a> 制作的主题。三段式设计、方便。</p>
+<p>之所以选择这个主题，有以下原因：</p>
+<ol type="1">
+<li>布局简洁明了</li>
+<li>当前版本已经方便地解决了数学公式显示问题</li>
+</ol>
+<p>接下来，将从如何安装该主题开始，详述基于该主题的Hexo的使用方法，其他主题也是大同小异。</p>
+<h1 id="hexo主题初始化">2. 3-Hexo主题初始化</h1>
+<h2 id="安装">2.1. 安装</h2>
+<p>在你的博客目录下，打开 <code>Git</code>，执行如下指令，克隆该主题到本地：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/yelog/hexo-theme-3-hexo.git themes/3-hexo</span></code></pre></div>
+<p>用 VS Code打开 <code>.\_config.yml</code></p>
+<p>找到如下的代码，修改为如下形式：</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span><span class="kw">:</span><span class="at"> 3-hexo</span></span></code></pre></div>
+<h2 id="更新">2.2. 更新</h2>
+<p>在你的博客目录下，打开 <code>Git</code>，执行如下指令，更新主题：</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> themes/3-hexo</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span></code></pre></div>
+<h1 id="hexo-主题设置">3. 3-Hexo 主题设置</h1>
+<h2 id="设置头像与图标">3.1. 设置头像与图标</h2>
+<p>用 VS Code打开 <code>./themes/3-hexo/_config.yml</code></p>
+<p>找到如下的代码，将自己的头像图片放到 <code>./themes/3-hexo/source/img</code> 里：</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 你的头像url</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">avatar</span><span class="kw">:</span><span class="at"> /img/avatar.png</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">favicon</span><span class="kw">:</span><span class="at"> /img/avatar.png</span></span></code></pre></div>
+<h2 id="语言国际化">3.1. 语言国际化</h2>
+<p>用 VS Code打开 <code>.\_config.yml</code></p>
+<p>找到如下的代码，修改为如下形式：</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">language</span><span class="kw">:</span><span class="at"> zh-CN</span></span></code></pre></div>
+<h2 id="关闭-hexo-自带代码高亮">3.3. 关闭 Hexo 自带代码高亮</h2>
+<p>用 VS Code打开 <code>.\_config.yml</code></p>
+<p>找到如下的代码，修改为如下形式：</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">highlight:</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">enable:</span> false</span></code></pre></div>
+<h2 id="数学公式支持">3.4. 数学公式支持</h2>
+<p>用 VS Code打开 <code>./themes/3-hexo/_config.yml</code></p>
+<p>找到如下的代码，修改为如下形式：</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># MathJax 数学公式支持</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mathjax</span><span class="kw">:</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">on</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co"> #是否启用</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">per_page</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="co"> # 若只渲染单个页面，此选项设为false，页面内加入 mathjax: true</span></span></code></pre></div>
+<p>数学公式样例： <span class="math display">\[
+f(x)=e^x+\pi
+\]</span></p>
+<p>由于 Hexo 自带的 math 渲染器并不好用，这里给出更完善的解决方案。</p>
+<p>首先安装 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Pandoc">Pandoc</a>，在<a target="_blank" rel="noopener" href="https://pandoc.org/installing.html#windows">这里</a>下载Win10版本的pandoc。</p>
+<p>在博客目录下，执行如下命令来更换渲染器：</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> uninstall hexo-renderer-marked <span class="at">--save</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install hexo-renderer-pandoc <span class="at">--save</span></span></code></pre></div>
+<p>渲染后如果如下公式换行显示正常，则成功！</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a^2<span class="fu">\\</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>b_2</span></code></pre></div>
+<p><span class="math display">\[
+a^2\\
+b_2
+\]</span></p>
+<h2 id="字数统计">3.5. 字数统计</h2>
+<p>先在博客根目录执行指令安装字数统计插件：</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> i hexo-wordcount <span class="at">--save</span></span></code></pre></div>
+<p>然后用 VS Code打开 <code>./themes/3-hexo/_config.yml</code></p>
+<p>找到如下的代码，修改为如下形式：</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">word_count</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># true 开启字数统计</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 开启此功能需要安装插件 ：在 hexo根目录 执行npm i hexo-wordcount --save</span></span></code></pre></div>
+<h2 id="链接设置">3.6. 链接设置</h2>
+<p>然后用 VS Code打开 <code>./themes/3-hexo/_config.yml</code></p>
+<p>找到如下的代码，修改为如下形式：</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#链接图标 显示顺序和下面顺序一致</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">link</span><span class="kw">:</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> color</span><span class="co"> # 链接样式，color: 彩色图标  white: 黑白图标</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">items</span><span class="kw">:</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co">    #rss: /atom.xml</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">github</span><span class="kw">:</span><span class="at"> https://github.com/yznnnn</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co">    #facebook: https://www.facebook.com/faker.tops</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co">    #twitter:</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co">    #linkedin:</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">    #instagram: https://www.facebook.com/faker.tops</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co">    #reddit: https://www.reddit.com/user/yelog/</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co">    #weibo: http://weibo.com/u/2307534817</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="co">    #jianshu: https://www.jianshu.com/u/ff56736de7cf</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="co">    #zhihu: https://www.zhihu.com/people/jaytp/activities</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co">    #csdn:</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co">    #oschina: https://my.oschina.net/yelog</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="co">    #juejin:</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">email</span><span class="kw">:</span><span class="at"> ych271828@gmail.com</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="co">    #qq: 872336115</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="co">    #kugou: https://www.kugou.com/</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="co">    #neteasemusic: https://music.163.com/#/user/home?id=88151013</span></span></code></pre></div>
+<h2 id="开启关于页面">3.7. 开启关于页面</h2>
+<p>在博客根目录执行如下指令：</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> new page <span class="st">&quot;about&quot;</span></span></code></pre></div>
+<p>该页面的文件将生成为 <code>./source/aoubt/index.md</code> ，根据你的需要进行编辑。</p>
+<p>用 VS Code打开 <code>./themes/3-hexo/_config.yml</code></p>
+<p>找到如下的代码，修改为如下形式，打开关于设置：</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 左下角自定义菜单</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">menu</span><span class="kw">:</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">about</span><span class="kw">:</span><span class="co">  # &#39;关于&#39; 按钮</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">on</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co"> # 是否显示</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">url</span><span class="kw">:</span><span class="at"> /about</span><span class="co">  # 跳转链接</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span><span class="co"> # 跳转类型 1：站内异步跳转 2：当前页面跳转 3：打开新的tab页</span></span></code></pre></div>
+<h2 id="代码高亮">3.8. 代码高亮</h2>
+<p>请先完成 <strong><em>3.3.关闭 Hexo 自带代码高亮</em></strong>。</p>
+<p>用 VS Code打开 <code>./themes/3-hexo/_config.yml</code></p>
+<p>找到如下的代码，修改为如下形式：</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">highlight</span><span class="kw">:</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">on</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co"> # true开启代码高亮，开启需要关闭博客 _config.yml 中的 highlight</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">lineNum</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="co"> # true显示行号</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">copy</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co"> # 复制功能</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> atom-dark</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 代码高亮主题,效果可以查看 https://highlightjs.org/static/demo/</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 支持主题：</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co"># sublime : 参考sublime的高亮主题</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co"># darcula : 参考idea中的darcula的主题</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co"># atom-dark : 参考Atom的dark主题</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co"># atom-light : 参考Atom的light主题</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="co"># github : 参考GitHub版的高亮主题</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="co"># github-gist : GitHub-Gist主题</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="co"># brown-paper : 牛皮纸效果</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="co"># gruvbox-light : gruvbox的light主题</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="co"># gruvbox-dark ： gruvbox的dark主题</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="co"># rainbow :</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="co"># railscasts :</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="co"># sunburst :</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="co"># kimbie-dark :</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="co"># kimbie-light :</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="co"># school-book : 纸张效果</span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="co"># zenbum : oschina 也选择此高亮主题</span></span></code></pre></div>
+<h2 id="表格样式">3.9. 表格样式</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">姓名</th>
+<th style="text-align: center;">数学</th>
+<th style="text-align: center;">语文</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">小红</td>
+<td style="text-align: center;">90</td>
+<td style="text-align: center;">98</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">小明</td>
+<td style="text-align: center;">98</td>
+<td style="text-align: center;">76</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">小李</td>
+<td style="text-align: center;">87</td>
+<td style="text-align: center;">95</td>
+</tr>
+</tbody>
+</table>
+<p>用 VS Code打开 <code>./themes/3-hexo/_config.yml</code></p>
+<p>找到如下的代码，修改为如下形式：</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># table 的样式</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span><span class="kw">:</span><span class="at"> green_title</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 为空时类似github的table样式</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># green 绿色样式</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># green_title 头部为青色的table样式</span></span></code></pre></div>
+<h2 id="图片管理">3.10. 图片管理</h2>
+<p>安装图片管理插件：</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install hexo-asset-image <span class="at">--save</span></span></code></pre></div>
+<p>用 VS Code打开 <code>.\_config.yml</code></p>
+<p>找到如下的代码，修改为如下形式：</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">post_asset_folder</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div>
+<p>当资源文件管理功能打开后，Hexo将会在你每一次通过 <code>hexo new [layout] &lt;title&gt;</code> 命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个文章文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。</p>
+<h1 id="文章编辑操作">4. 文章编辑操作</h1>
+<h2 id="文章创建">4.1. 文章创建</h2>
+<p>创建新文章时，总得有个模板，Hexo 的文章模板保存在目录 <code>./scaffolds</code> 下。</p>
+<p>你可以执行下列命令来创建一篇新文章。</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> new [layout] <span class="op">&lt;</span>title<span class="op">&gt;</span></span></code></pre></div>
+<p><code>[layout]</code> 是可选项，若缺省，则默认为 <code>post</code>。</p>
+<p>我的 <code>post</code> 模板为（<code>./scaffolds/post.md</code>）：</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &#123;&#123; title &#125;&#125;</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> &#123;&#123; date &#125;&#125;</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="an">tags:</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code></pre></div>
+<p>比如我创建一篇以 <code>post</code> 为模板，名为 <code>test</code> 的文章，使用如下指令：</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> new post <span class="st">&quot;test&quot;</span></span></code></pre></div>
+<p>如下指令与上面的指令等价：</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> new <span class="st">&quot;test&quot;</span></span></code></pre></div>
+<p>指令执行后，在目录 <code>./source/_posts</code> 下会生成对应的 <code>test.md</code> 文件。</p>
+<p>直接打开编辑你的文章就行了。</p>
+<h2 id="文章删除">4.2. 文章删除</h2>
+<p>直接在目录 <code>./source/_posts</code> 下删除对应的文件，然后执行缓存清理指令即可：</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> clean</span></code></pre></div>
+<h2 id="文章分类">4.3. 文章分类</h2>
+<div class="sourceCode" id="cb24"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &#123;&#123; title &#125;&#125;</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> &#123;&#123; date &#125;&#125;</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co">- A</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="co">- B</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="co">— C</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="an">tags:</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="co">- tag1</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="co">- tag2</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code></pre></div>
+<p>在文章的头部对应部分，可以直接编辑分类信息。</p>
+<p>比如上面的示例中，<code>categories</code> 下面，<code>A</code> 是 <code>B</code> 的父分类，<code>B</code> 是 <code>C</code> 的父分类，可以一直循环下去。</p>
+<p><code>tags</code> 是对应的标签。</p>
+<p>分类信息将在左侧边栏显示，标签可用于搜索栏中使用 <code>#tag1</code> 检索文章。</p>
+<h2 id="文章置顶">4.4. 文章置顶</h2>
+<div class="sourceCode" id="cb25"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &#123;&#123; title &#125;&#125;</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> &#123;&#123; date &#125;&#125;</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="an">top:</span><span class="co"> x</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="co">- A</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co">- B</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="co">— C</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="an">tags:</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="co">- tag1</span></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="co">- tag2</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code></pre></div>
+<p>在文章文件头部加上 <code>top:x</code> ，主题将自动为其置顶，<code>x</code> 为置顶权重，若有多个文章设置了置顶，将按照置顶权重排序。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 ych271828@gmail.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
