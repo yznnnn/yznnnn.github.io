@@ -103,7 +103,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(8)</small>
+                <small>(7)</small>
             
         </div>
     </li>
@@ -265,8 +265,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="8">
-<input type="hidden" id="yelog_site_word_count" value="8.3k">
+<input type="hidden" id="yelog_site_posts_number" value="7">
+<input type="hidden" id="yelog_site_word_count" value="8.1k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -357,14 +357,6 @@
 
     
     <nav id="title-list-nav">
-        
-        <a id="top" class="全部文章 "
-           href="/2021/05/09/total/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="文章导航☞">文章导航☞</span>
-            <span class="post-date" title="2021-05-09 09:14:44">2021/05/09</span>
-        </a>
         
         <a  class="全部文章 英语 论文写作 "
            href="/2021/05/11/paper-writing-skill/"
@@ -469,12 +461,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2021-05-09 16:08:58'>2021-05-08 16:18</time>
+            发布时间 : <time class="date" title='最后更新: 2021-05-15 18:04:24'>2021-05-08 16:18</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1.3k</span>
+        <span>字数:1.4k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -600,15 +592,23 @@
 <h1 id="部署本地hexo博客到github-pages">5. 部署本地Hexo博客到Github Pages</h1>
 <p>先安装一个插件，用于部署本地Hexo博客到Github Pages：</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install hexo-deployer-git <span class="at">--save</span></span></code></pre></div>
-<p>安装完毕后，首先在本地生成静态页面：</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> clean     <span class="co"># 清除缓存 </span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> generate  <span class="co"># 生成静态页面</span></span></code></pre></div>
+<p>安装完毕后，首先设置部署地址，用 VS Code打开 <code>.\_config.yml</code></p>
+<p>找到如下的代码，修改为如下形式：</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Deployment</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">## Docs: https://hexo.io/docs/one-command-deployment</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">deploy</span><span class="kw">:</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="at">   </span><span class="fu">type</span><span class="kw">:</span><span class="at"> git</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="at">   </span><span class="fu">repo</span><span class="kw">:</span><span class="at"> git@github.com:yznnnn/yznnnn.github.io.git</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="at">   </span><span class="fu">branch</span><span class="kw">:</span><span class="at"> master</span></span></code></pre></div>
+<p>在本地生成静态页面：</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> clean     <span class="co"># 清除缓存 </span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> generate  <span class="co"># 生成静态页面</span></span></code></pre></div>
 <p>然后部署到 Github Pages 中去：</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> deploy</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> deploy</span></code></pre></div>
 <p>如果一切顺利，就能在 <code>https://xxx.github.io/</code> 上看到你的页面啦！</p>
 <p>如果显示404，请先去上个厕所回来再看！</p>
 <p>部署命令可以集成为如下一条命令（根据这个命令，你可以DIY一下自己的部署命令）：</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> clean <span class="kw">&amp;&amp;</span> <span class="ex">hexo</span> generate <span class="kw">&amp;&amp;</span> <span class="ex">hexo</span> deploy <span class="kw">&amp;&amp;</span> <span class="ex">hexo</span> server</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hexo</span> clean <span class="kw">&amp;&amp;</span> <span class="ex">hexo</span> generate <span class="kw">&amp;&amp;</span> <span class="ex">hexo</span> deploy <span class="kw">&amp;&amp;</span> <span class="ex">hexo</span> server</span></code></pre></div>
 <h1 id="推荐阅读">推荐阅读</h1>
 <ul>
 <li><p><a href="/2021/05/08/3-HexoIntroduction/">基于3-Hexo主题的Hexo博客操作介绍</a>：</p>
@@ -620,10 +620,6 @@
     </div>
 </article>
 
-
-<p>
-    <a  class="dashang" onclick="dashangToggle()">赏</a>
-</p>
 
 
 
@@ -650,24 +646,6 @@
     </div>
 </div>
 
-<div class="hide_box" onclick="dashangToggle()"></div>
-<div class="shang_box">
-    <a class="shang_close"  onclick="dashangToggle()">×</a>
-    <div class="shang_tit">
-        <p>喜欢就点赞,疼爱就打赏</p>
-    </div>
-    <div class="shang_payimg">
-        <div class="pay_img">
-            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
-            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
-        </div>
-    </div>
-    <div class="shang_payselect">
-        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
-    </div>
-</div>
-
-
 </body>
 <script src="/js/jquery.pjax.js?v=1.1.0" ></script>
 
@@ -681,14 +659,6 @@
         
 
         /*渲染打赏样式*/
-        
-        $("input[name=pay]").on("click", function () {
-            if($("input[name=pay]:checked").val()=="weixin"){
-                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
-            } else {
-                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
-            }
-        })
         
 
         /*高亮代码块行号*/
@@ -707,11 +677,6 @@
     }
 
     /*打赏页面隐藏与展示*/
-    
-    function dashangToggle() {
-        $(".shang_box").fadeToggle();
-        $(".hide_box").fadeToggle();
-    }
     
 
 </script>
