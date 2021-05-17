@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Zotero——你的文献管理工具 | 余沧海的Blog</title>
-  <meta name="keywords" content=" 文献管理 ">
-  <meta name="description" content="Zotero——你的文献管理工具 | 余沧海的Blog">
+  <title>graphviz —— Python 图绘制库 | 余沧海的Blog</title>
+  <meta name="keywords" content=" Python ">
+  <meta name="description" content="graphviz —— Python 图绘制库 | 余沧海的Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="[toc] 介绍 Graphviz （英文：Graph Visualization Software的缩写）是一个由AT&amp;T实验室启动的开源工具包，用于绘制DOT语言脚本描述的图形。它也提供了供其它软件使用的库。Graphviz是一个自由软件，其授权为Eclipse Public License。其Mac版本曾经获得2004年的苹果设计奖[2]。 安装 conda install">
 <meta property="og:type" content="article">
@@ -533,9 +533,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Zotero" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-python-graphviz" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Zotero——你的文献管理工具</h1>
+        <h1 class="article-title">graphviz —— Python 图绘制库</h1>
     
     <div class="article-meta">
         
@@ -545,9 +545,9 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="科研">科研</a> > 
+            <a  data-rel="编程">编程</a> > 
             
-            <a  data-rel="科研&lt;---&gt;工具">工具</a>
+            <a  data-rel="编程&lt;---&gt;Python">Python</a>
             
         </span>
         
@@ -555,19 +555,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">文献管理</a>
+            <a class="color2">Python</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2021-05-10 14:07:48'>2021-05-10 09:29</time>
+            发布时间 : <time class="date" title='最后更新: 2021-05-17 09:51:20'>2021-05-17 09:08</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:418</span>
+        <span>字数:197</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -586,7 +586,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">1. 介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="toc-text">2. 下载安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E8%AE%BE%E7%BD%AE"><span class="toc-text">3. 初始设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E7%9B%AE%E5%BD%95%E8%AE%BE%E7%BD%AE"><span class="toc-text">3.1. 文件保存目录设置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-text">4. 插件安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#zotfile"><span class="toc-text">4.1. ZotFile</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3"><span class="toc-text">使用文档</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%94%A8%E5%9C%A8-jupyter-lab-%E4%B8%AD%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="toc-text">一个简单的用在 Jupyter Lab 中的例子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#node"><span class="toc-text">Node</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -602,29 +602,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">1. 介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="toc-text">2. 下载安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E8%AE%BE%E7%BD%AE"><span class="toc-text">3. 初始设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E7%9B%AE%E5%BD%95%E8%AE%BE%E7%BD%AE"><span class="toc-text">3.1. 文件保存目录设置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-text">4. 插件安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#zotfile"><span class="toc-text">4.1. ZotFile</span></a></li></ol></li></ol></div></p>
-<h1 id="介绍">1. 介绍</h1>
-<p>Zotero是一款自由及开放源代码的文献管理软件，管理书目信息（如作者、标题、出版社、摘要、阅读笔记等）及相关材料（如PDF文件等)。其最著名的特性是作为浏览器插件、在线同步、与文档编辑软件如Microsoft Word、LibreOffice、OpenOffice.org Writer、NeoOffice等集成，可生成文内引用、生成页面脚注或文后的参考文献（bibliographies）。</p>
-<p><em>“Zotero”大致来源于阿尔巴尼亚语动词，意为“掌握”（to master）</em></p>
-<p><a target="_blank" rel="noopener" href="https://www.zotero.org/">Zotero</a> 支持全平台，完全免费，个人认为是最好的文献管理软件。</p>
-<h1 id="下载安装">2. 下载安装</h1>
-<p>在<a target="_blank" rel="noopener" href="https://www.zotero.org/download/">这个</a>页面下载你对应系统的Zotera进行安装，本文是在 Win10 环境下安装的。</p>
-<h1 id="初始设置">3. 初始设置</h1>
-<h2 id="文件保存目录设置">3.1. 文件保存目录设置</h2>
-<p>点击顶部菜单栏，<code>编辑(E)</code> &gt; <code>首选项(N)</code> &gt; <code>高级</code> &gt; <code>文件和文件夹</code> &gt; <code>数据存储位置</code> 处设置。</p>
-<p>在你更换计算机或重装系统时，可以直接备份这里的数据文件，复制到新的设备或系统中即可继续使用。</p>
-<h1 id="插件安装">4. 插件安装</h1>
-<h2 id="zotfile">4.1. ZotFile</h2>
-<p><a target="_blank" rel="noopener" href="http://zotfile.com/">ZotFile</a> 是一款用于自动重命名PDF的插件。</p>
-<p>在官网下载 ''zotfile-5.0.16-fx.xpi'' 后，打开 Zotero，点击顶部菜单栏，<code>工具(T)</code> &gt; <code>插件</code> &gt; <code>⚙</code> &gt; <code>install add-on from file</code> ，选择刚刚下载的xpi文件。</p>
-<p>安装完重启软件，就能在 <code>工具(T)</code> 里看到插件设置选项 <code>ZotFile Preference</code>。</p>
-<p>打开后选择 <code>Renaming Rules</code> ，就能看见文件命名规则。</p>
-<p>我的命名规则为：</p>
-<pre><code>&#123;%y_&#125;&#123;%a_&#125;&#123;%t&#125;</code></pre>
+        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3"><span class="toc-text">使用文档</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%94%A8%E5%9C%A8-jupyter-lab-%E4%B8%AD%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="toc-text">一个简单的用在 Jupyter Lab 中的例子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#node"><span class="toc-text">Node</span></a></li></ol></li></ol></div></p>
+<h1 id="介绍">介绍</h1>
+<p><a target="_blank" rel="noopener" href="http://graphviz.org/">Graphviz</a> （英文：Graph Visualization Software的缩写）是一个由AT&amp;T实验室启动的开源工具包，用于绘制DOT语言脚本描述的图形。它也提供了供其它软件使用的库。Graphviz是一个自由软件，其授权为Eclipse Public License。其Mac版本曾经获得2004年的苹果设计奖[2]。</p>
+<h1 id="安装">安装</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install pydot</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install graphviz</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install python-graphviz</span></code></pre></div>
+<p>在 Win10 中，还需要在环境变量 <code>path</code> 中添加类似 <code>C:\Users\yzn\anaconda3\Library\bin\graphviz</code> 的内容。</p>
+<h1 id="使用文档">使用文档</h1>
+<p><a target="_blank" rel="noopener" href="https://graphviz.readthedocs.io/en/stable/manual.html#jupyter-notebooks">官方使用文档</a></p>
+<h2 id="一个简单的用在-jupyter-lab-中的例子">一个简单的用在 Jupyter Lab 中的例子</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> graphviz</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> graphviz.Digraph()</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>d.node(<span class="st">&quot;node_1&quot;</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>d.node(<span class="st">&quot;node_2&quot;</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>d.edge(<span class="st">&quot;node_1&quot;</span>,<span class="st">&quot;node_2&quot;</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
+<p><img src="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0D%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%0D%0A%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0D%0A%3C!--%20Generated%20by%20graphviz%20version%202.38.0%20(20140413.2041)%0D%0A%20--%3E%0D%0A%3C!--%20Title%3A%20%253%20Pages%3A%201%20--%3E%0D%0A%3Csvg%20width%3D%2285pt%22%20height%3D%22116pt%22%0D%0A%20viewBox%3D%220.00%200.00%2084.69%20116.00%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0D%0A%3Cg%20id%3D%22graph0%22%20class%3D%22graph%22%20transform%3D%22scale(1%201)%20rotate(0)%20translate(4%20112)%22%3E%0D%0A%3Ctitle%3E%253%3C%2Ftitle%3E%0D%0A%3Cpolygon%20fill%3D%22white%22%20stroke%3D%22none%22%20points%3D%22-4%2C4%20-4%2C-112%2080.6932%2C-112%2080.6932%2C4%20-4%2C4%22%2F%3E%0D%0A%3C!--%20node_1%20--%3E%0D%0A%3Cg%20id%3D%22node1%22%20class%3D%22node%22%3E%3Ctitle%3Enode_1%3C%2Ftitle%3E%0D%0A%3Cellipse%20fill%3D%22none%22%20stroke%3D%22black%22%20cx%3D%2238.3466%22%20cy%3D%22-90%22%20rx%3D%2238.1938%22%20ry%3D%2218%22%2F%3E%0D%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%2238.3466%22%20y%3D%22-86.3%22%20font-family%3D%22Times%20New%20Roman%2Cserif%22%20font-size%3D%2214.00%22%3Enode_1%3C%2Ftext%3E%0D%0A%3C%2Fg%3E%0D%0A%3C!--%20node_2%20--%3E%0D%0A%3Cg%20id%3D%22node2%22%20class%3D%22node%22%3E%3Ctitle%3Enode_2%3C%2Ftitle%3E%0D%0A%3Cellipse%20fill%3D%22none%22%20stroke%3D%22black%22%20cx%3D%2238.3466%22%20cy%3D%22-18%22%20rx%3D%2238.1938%22%20ry%3D%2218%22%2F%3E%0D%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%2238.3466%22%20y%3D%22-14.3%22%20font-family%3D%22Times%20New%20Roman%2Cserif%22%20font-size%3D%2214.00%22%3Enode_2%3C%2Ftext%3E%0D%0A%3C%2Fg%3E%0D%0A%3C!--%20node_1%26%2345%3B%26gt%3Bnode_2%20--%3E%0D%0A%3Cg%20id%3D%22edge1%22%20class%3D%22edge%22%3E%3Ctitle%3Enode_1%26%2345%3B%26gt%3Bnode_2%3C%2Ftitle%3E%0D%0A%3Cpath%20fill%3D%22none%22%20stroke%3D%22black%22%20d%3D%22M38.3466%2C-71.6966C38.3466%2C-63.9827%2038.3466%2C-54.7125%2038.3466%2C-46.1124%22%2F%3E%0D%0A%3Cpolygon%20fill%3D%22black%22%20stroke%3D%22black%22%20points%3D%2241.8467%2C-46.1043%2038.3466%2C-36.1043%2034.8467%2C-46.1044%2041.8467%2C-46.1043%22%2F%3E%0D%0A%3C%2Fg%3E%0D%0A%3C%2Fg%3E%0D%0A%3C%2Fsvg%3E%0D%0A"></p>
+<h2 id="node">Node</h2>
 <ul>
-<li>%y：年份</li>
-<li>%a：作者</li>
-<li>%t：标题</li>
+<li><p>shape</p>
+<pre><code>import graphviz
+d = graphviz.Digraph()
+d.node(&quot;node_1&quot;,shape=&quot;circle&quot;)
+d</code></pre>
+<p><a target="_blank" rel="noopener" href="https://graphviz.org/doc/info/shapes.html">Node Shapes (graphviz.org)</a></p></li>
+<li><p>sd</p></li>
 </ul>
 
       
