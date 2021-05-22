@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Zotero——你的文献管理工具 | 余沧海的Blog</title>
-  <meta name="keywords" content=" 文献管理 ">
-  <meta name="description" content="Zotero——你的文献管理工具 | 余沧海的Blog">
+  <title>聚类算法的评价指标 | 余沧海的Blog</title>
+  <meta name="keywords" content=" Clustering ">
+  <meta name="description" content="聚类算法的评价指标 | 余沧海的Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="[toc] 介绍 Graphviz （英文：Graph Visualization Software的缩写）是一个由AT&amp;T实验室启动的开源工具包，用于绘制DOT语言脚本描述的图形。它也提供了供其它软件使用的库。Graphviz是一个自由软件，其授权为Eclipse Public License。其Mac版本曾经获得2004年的苹果设计奖[2]。 安装 conda install">
 <meta property="og:type" content="article">
@@ -558,9 +558,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Zotero" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Cluster-Measure" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Zotero——你的文献管理工具</h1>
+        <h1 class="article-title">聚类算法的评价指标</h1>
     
     <div class="article-meta">
         
@@ -572,7 +572,7 @@
             
             <a  data-rel="科研">科研</a> > 
             
-            <a  data-rel="科研&lt;---&gt;工具">工具</a>
+            <a  data-rel="科研&lt;---&gt;聚类">聚类</a>
             
         </span>
         
@@ -580,19 +580,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">文献管理</a>
+            <a class="color1">Clustering</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2021-05-10 14:07:48'>2021-05-10 09:29</time>
+            发布时间 : <time class="date" title='最后更新: 2021-05-22 19:11:36'>2021-05-21 18:44</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:418</span>
+        <span>字数:344</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -611,7 +611,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">1. 介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="toc-text">2. 下载安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E8%AE%BE%E7%BD%AE"><span class="toc-text">3. 初始设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E7%9B%AE%E5%BD%95%E8%AE%BE%E7%BD%AE"><span class="toc-text">3.1. 文件保存目录设置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-text">4. 插件安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#zotfile"><span class="toc-text">4.1. ZotFile</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%96%E9%83%A8%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87"><span class="toc-text">外部评价指标</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#purity"><span class="toc-text">Purity</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nminormalized-mutual-information"><span class="toc-text">NMI(Normalized mutual information)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-text">参考文献</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -627,30 +627,67 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">1. 介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="toc-text">2. 下载安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E8%AE%BE%E7%BD%AE"><span class="toc-text">3. 初始设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E7%9B%AE%E5%BD%95%E8%AE%BE%E7%BD%AE"><span class="toc-text">3.1. 文件保存目录设置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-text">4. 插件安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#zotfile"><span class="toc-text">4.1. ZotFile</span></a></li></ol></li></ol></div></p>
-<h1 id="介绍">1. 介绍</h1>
-<p>Zotero是一款自由及开放源代码的文献管理软件，管理书目信息（如作者、标题、出版社、摘要、阅读笔记等）及相关材料（如PDF文件等)。其最著名的特性是作为浏览器插件、在线同步、与文档编辑软件如Microsoft Word、LibreOffice、OpenOffice.org Writer、NeoOffice等集成，可生成文内引用、生成页面脚注或文后的参考文献（bibliographies）。</p>
-<p><em>“Zotero”大致来源于阿尔巴尼亚语动词，意为“掌握”（to master）</em></p>
-<p><a target="_blank" rel="noopener" href="https://www.zotero.org/">Zotero</a> 支持全平台，完全免费，个人认为是最好的文献管理软件。</p>
-<h1 id="下载安装">2. 下载安装</h1>
-<p>在<a target="_blank" rel="noopener" href="https://www.zotero.org/download/">这个</a>页面下载你对应系统的Zotera进行安装，本文是在 Win10 环境下安装的。</p>
-<h1 id="初始设置">3. 初始设置</h1>
-<h2 id="文件保存目录设置">3.1. 文件保存目录设置</h2>
-<p>点击顶部菜单栏，<code>编辑(E)</code> &gt; <code>首选项(N)</code> &gt; <code>高级</code> &gt; <code>文件和文件夹</code> &gt; <code>数据存储位置</code> 处设置。</p>
-<p>在你更换计算机或重装系统时，可以直接备份这里的数据文件，复制到新的设备或系统中即可继续使用。</p>
-<h1 id="插件安装">4. 插件安装</h1>
-<h2 id="zotfile">4.1. ZotFile</h2>
-<p><a target="_blank" rel="noopener" href="http://zotfile.com/">ZotFile</a> 是一款用于自动重命名PDF的插件。</p>
-<p>在官网下载 ''zotfile-5.0.16-fx.xpi'' 后，打开 Zotero，点击顶部菜单栏，<code>工具(T)</code> &gt; <code>插件</code> &gt; <code>⚙</code> &gt; <code>install add-on from file</code> ，选择刚刚下载的xpi文件。</p>
-<p>安装完重启软件，就能在 <code>工具(T)</code> 里看到插件设置选项 <code>ZotFile Preference</code>。</p>
-<p>打开后选择 <code>Renaming Rules</code> ，就能看见文件命名规则。</p>
-<p>我的命名规则为：</p>
-<pre><code>&#123;%y_&#125;&#123;%a_&#125;&#123;%t&#125;</code></pre>
+        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%96%E9%83%A8%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87"><span class="toc-text">外部评价指标</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#purity"><span class="toc-text">Purity</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nminormalized-mutual-information"><span class="toc-text">NMI(Normalized mutual information)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-text">参考文献</span></a></li></ol></div></p>
+<h1 id="外部评价指标">外部评价指标</h1>
+<p>聚类算法中的外部评价指标指的是，在评价聚类结果时，还需要真实的数据标签。</p>
+<p>给定数据集 <span class="math inline">\({\mathbf X}\in{\mathbb R}^{m\times n}\)</span>，<span class="math inline">\(n\)</span> 个列向量表示 <span class="math inline">\(n\)</span> 个样本，每个样本有 <span class="math inline">\(m\)</span> 维特征，对应的真实标签为 <span class="math inline">\({\mathbf Y}\in{\mathbb R}^{n\times 1}\)</span>。</p>
+<p>经过某个聚类算法得到的预测标签为 <span class="math inline">\(\overline{\mathbf Y}\in{\mathbb R}^{n\times 1}\)</span></p>
+<h2 id="purity">Purity</h2>
+<p><span class="math display">\[
+{\rm Purity}(\Omega,C)
+=
+\frac{1}{n}
+\sum_k\max_z|\omega_k\cap c_z|
+\in[0,1]
+\]</span></p>
+<p>其中：</p>
 <ul>
-<li>%y：年份</li>
-<li>%a：作者</li>
-<li>%t：标题</li>
+<li><p><span class="math inline">\(\Omega\)</span> 是基于 <span class="math inline">\(\overline{\mathbf Y}\)</span> 对样本按预测得到的簇进行的预测簇划分： <span class="math display">\[
+\Omega=\{\omega_1,\omega_2,...,\omega_K\}\\
+\omega_k=\{
+{\mathbf x}_i
+|\overline{y}_i=k
+\}
+\]</span></p></li>
+<li><p><span class="math inline">\(C\)</span> 是基于 <span class="math inline">\({\mathbf Y}\)</span> 对样本按真实分类进行的真实簇划分： <span class="math display">\[
+C=\{c_1,c_2,...,c_Z\}\\
+c_z=\{
+{\mathbf x}_i
+|y_i=z
+\}
+\]</span></p></li>
+<li><p><span class="math inline">\(\max_z|\omega_k\cap c_z|\)</span> 的意思是，在集合 <span class="math inline">\(\omega_k\)</span> 中，对于每个真实标签 <span class="math inline">\(z\)</span> 而言，计算满足 <span class="math inline">\(y_i=z\)</span> 的 <span class="math inline">\({\mathbf x}_i\)</span> 的数量，取最大值： <span class="math display">\[
+\omega_k\cap c_z=
+\{
+{\mathbf x}_i|
+\overline{y}_i=k
+{\ \rm and\ }
+y_i=z
+\}
+\]</span></p></li>
 </ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="va">purity</span> <span class="op">=</span> <span class="va">Purity</span>(<span class="va">Label</span><span class="op">,</span><span class="va">Label_predict</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">%UNTITLED 此处显示有关此函数的摘要</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">%   此处显示详细说明</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="va">Lidx</span> <span class="op">=</span> <span class="va">unique</span>(<span class="va">Label</span>)<span class="op">;</span> </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="va">predLidx</span> <span class="op">=</span> <span class="va">unique</span>(<span class="va">Label_predict</span>)<span class="op">;</span> </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="va">pred_classnum</span> <span class="op">=</span> <span class="va">length</span>(<span class="va">predLidx</span>)<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="va">correnum</span> <span class="op">=</span> <span class="fl">0</span><span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">for</span> <span class="va">ci</span> <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="va">pred_classnum</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="va">incluster</span> <span class="op">=</span> <span class="va">Label</span>(<span class="va">find</span>(<span class="va">Label_predict</span> <span class="op">==</span> <span class="va">predLidx</span>(<span class="va">ci</span>)))<span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="va">inclunub</span> <span class="op">=</span> <span class="va">hist</span>(<span class="va">incluster</span><span class="op">,</span> <span class="fl">1</span><span class="op">:</span><span class="va">max</span>(<span class="va">incluster</span>))<span class="op">;</span> </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> <span class="va">isempty</span>(<span class="va">inclunub</span>) </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">inclunub</span><span class="op">=</span><span class="fl">0</span><span class="op">;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="va">correnum</span> <span class="op">=</span> <span class="va">correnum</span> <span class="op">+</span> <span class="va">max</span>(<span class="va">inclunub</span>)<span class="op">;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="va">purity</span> <span class="op">=</span> <span class="va">correnum</span><span class="op">/</span><span class="va">length</span>(<span class="va">Label_predict</span>)<span class="op">;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div>
+<h2 id="nminormalized-mutual-information">NMI(Normalized mutual information)</h2>
+<h1 id="参考文献">参考文献</h1>
+<p>[<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/53840697">ML] 聚类评价指标 - 知乎 (zhihu.com)</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 ych271828@gmail.com </span>
@@ -663,6 +700,46 @@
 
 
 
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
     
 
 
